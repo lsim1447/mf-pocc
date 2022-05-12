@@ -1,0 +1,17 @@
+{
+    "private": true,
+    "workspaces": [
+      "./header",
+      "./footer",
+      "./pdp"
+    ],
+    "scripts": {
+      "dev": "concurrently \"cd header; yarn dev\" \"cd footer; yarn dev\" \"cd pdp; yarn dev\"",
+      "build": "concurrently \"cd header; yarn build\" \"cd footer; yarn build\" \"cd pdp; yarn build\"",
+      "start": "concurrently \"cd header; yarn start\" \"cd footer; yarn start\" \"cd pdp; yarn start\""
+    },
+    "dependencies": {
+      "concurrently": "^7.0.0"
+    }
+  }
+  
